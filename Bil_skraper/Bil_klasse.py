@@ -4,8 +4,8 @@ class Bil:
         self.navn = navn
         self.link = link
         self.annonse_id = annonse_id
+        self.ekstra_info = {}
 
         self.pris = None
         self.år = None
         self.kmstand = None
-        self.byttet_hovedbatteri = False
