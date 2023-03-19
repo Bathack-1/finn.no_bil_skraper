@@ -9,3 +9,4 @@ class Bil:
         self.pris = None
         self.år = None
         self.kmstand = None
+        self.annonse_opprettelsesdato = None

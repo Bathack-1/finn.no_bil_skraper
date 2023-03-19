@@ -63,14 +63,31 @@ def skrap():
                 if ord.lower() in spesifikasjoner.text.lower():                 #sammenligner det i annonsen med nyttig info
                     bil.ekstra_info[ord] = spesifikasjons_boks_data[index].text     #lagrer det, hvis det er nyttig
 
-        print(bil.ekstra_info)
+
+            ###finne lokasjon###
+        steds_vindu = html_data.find("span", class_="u-mh16")       #lette etter der lokasjonen står
+        if steds_vindu:                                             #Hvis verdien finnes
+            bil.ekstra_info["Lokasjon"] = steds_vindu.text          #lagre den
+        else:                                                       #ellers
+            steds_vindu = html_data.find("p", class_="u-mh16")      #så er lokasjonen en full adresse
+            bil.ekstra_info["Lokasjon"] = steds_vindu.text          #lagre den
+
+
+            ###finne opplastningsdato###
         """
-            søke gjennom alle "dt" verdien, helt til jeg finner en "interesant", dermed skal jeg gå til den "dd" verdien og lagre det i klassen under "dt" verdien
+        skrape for det første bilde, dele det opp i en liste, beholde delene som forteller dato, lagre det til bilen
+        
         """
+        bilde = html_data.find("img", class_="img-format__img u-border-radius-8px")     #det er hva bildene er lagret som i html
+        bilde_link = bilde["src"]                                                       #kun ta "src" elementet
+        splitet_bilde_link = bilde_link.split("/")                                      #splittet det opp
+        bilde_dato = f"{splitet_bilde_link[8]} {splitet_bilde_link[6]} {splitet_bilde_link[5]}"    #Ta det 8. 6. og 5. delen av listen. [dag], [måned], [år]
+        bil.annonse_opprettelsesdato = bilde_dato
+        print(bilde_dato)
 
     print("\n", len(alle_biler))
 
-    sortert_km = sorted(alle_biler, key=lambda bil: bil.kmstand)
+    sortert_km = sorted(alle_biler, key=lambda bil: bil.kmstand)    #sorterer listen etter kmstand
 
     for bil in sortert_km:
         print(bil.kmstand, "km", bil.navn)
