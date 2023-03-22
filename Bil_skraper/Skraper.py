@@ -116,7 +116,7 @@ class Skraper:
     def skrap_alle_annonser(self):
         for bil in self.alle_biler:
             self.skrap_annonse(bil)
-            print(bil.lokasjon)
+            print(bil.link)
 
     """
     her er noen eksempler på hvordan elementer kan se ut i html koden:
