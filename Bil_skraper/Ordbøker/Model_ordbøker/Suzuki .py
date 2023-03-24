@@ -1,0 +1,15 @@
+model_bok = { 
+    "Across ": "model=1.811.8375", 
+    "Baleno ": "model=1.811.1373", 
+    "Grand Vitara ": "model=1.811.3757", 
+    "Ignis ": "model=1.811.6748", 
+    "Jimny ": "model=1.811.7142", 
+    "Kizashi ": "model=1.811.2000146", 
+    "Liana ": "model=1.811.7177", 
+    "SX4 ": "model=1.811.8269", 
+    "SX4 S-Cross ": "model=1.811.2000284", 
+    "Swift ": "model=1.811.1377", 
+    "Vitara ": "model=1.811.1378", 
+    "XL7 ": "model=1.811.8081", 
+    "Andre ": "model=1.811.2120", 
+} 

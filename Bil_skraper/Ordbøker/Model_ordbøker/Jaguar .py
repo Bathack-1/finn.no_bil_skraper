@@ -1,0 +1,16 @@
+model_bok = { 
+    "E-PACE ": "model=1.775.2000432", 
+    "E-TYPE ": "model=1.775.2000124", 
+    "F-PACE ": "model=1.775.2000371", 
+    "F-TYPE ": "model=1.775.2000252", 
+    "I-PACE ": "model=1.775.2000447", 
+    "S-TYPE ": "model=1.775.3747", 
+    "X-TYPE ": "model=1.775.2000042", 
+    "XE ": "model=1.775.2000324", 
+    "XF ": "model=1.775.8317", 
+    "XJ ": "model=1.775.3806", 
+    "XJR ": "model=1.775.2000389", 
+    "XJS ": "model=1.775.1112", 
+    "XK ": "model=1.775.3035", 
+    "Andre ": "model=1.775.2084", 
+} 
