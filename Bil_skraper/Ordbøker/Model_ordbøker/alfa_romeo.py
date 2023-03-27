@@ -1,0 +1,18 @@
+alfa_romeo_model_bok = { 
+    "147": "model=1.3233.7176", 
+    "156": "model=1.3233.3730", 
+    "159": "model=1.3233.8169", 
+    "159 SportWagon": "model=1.3233.6735", 
+    "166": "model=1.3233.3729", 
+    "Brera": "model=1.3233.8251", 
+    "GTV": "model=1.3233.3239", 
+    "Giulia": "model=1.3233.2000373", 
+    "Giulia Quadrifoglio": "model=1.3233.2000535", 
+    "Giulietta": "model=1.3233.3785", 
+    "MiTo": "model=1.3233.2000094", 
+    "Spider": "model=1.3233.3238", 
+    "Stelvio": "model=1.3233.2000407", 
+    "Stelvio Quadrifoglio": "model=1.3233.2000502", 
+    "Tonale": "model=1.3233.2000597", 
+    "Andre": "model=1.3233.3234", 
+} 

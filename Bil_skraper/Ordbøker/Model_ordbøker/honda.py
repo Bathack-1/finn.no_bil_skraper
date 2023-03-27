@@ -1,0 +1,16 @@
+honda_model_bok = { 
+    "Accord": "model=1.771.1087", 
+    "CR-V": "model=1.771.3027", 
+    "CR-Z": "model=1.771.2000167", 
+    "Civic": "model=1.771.1088", 
+    "FR-V": "model=1.771.8088", 
+    "HR-V": "model=1.771.3744", 
+    "Insight": "model=1.771.2000117", 
+    "Jazz": "model=1.771.7514", 
+    "Legend": "model=1.771.1090", 
+    "Prelude": "model=1.771.1092", 
+    "Ridgeline": "model=1.771.8097", 
+    "S2000": "model=1.771.3803", 
+    "Stream": "model=1.771.2000040", 
+    "e": "model=1.771.8363", 
+} 

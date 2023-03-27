@@ -1,0 +1,15 @@
+subaru_model_bok = { 
+    "B9 Tribeca": "model=1.810.2000047", 
+    "BRZ": "model=1.810.2000228", 
+    "Domingo": "model=1.810.3067", 
+    "Forester": "model=1.810.3655", 
+    "Impreza": "model=1.810.1368", 
+    "Justy": "model=1.810.1369", 
+    "Legacy": "model=1.810.1370", 
+    "Levorg": "model=1.810.2000344", 
+    "Outback": "model=1.810.7141", 
+    "Solterra": "model=1.810.2000590", 
+    "Trezia": "model=1.810.2000196", 
+    "XV": "model=1.810.2000206", 
+    "Andre": "model=1.810.2119", 
+} 
