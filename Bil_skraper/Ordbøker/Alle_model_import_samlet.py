@@ -1,5 +1,4 @@
-from .Model_ordbøker.__pycache__ import * 
-from .Model_ordbøker.amc import * 
+from .Model_ordbøker.amc import *
 from .Model_ordbøker.abarth import * 
 from .Model_ordbøker.alfa_romeo import * 
 from .Model_ordbøker.alpina import * 
