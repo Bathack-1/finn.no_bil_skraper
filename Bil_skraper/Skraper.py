@@ -7,7 +7,8 @@ class Skraper:
     def __init__(self, link):
         self.link = link
         self.alle_biler = []
-        self.spesifikasjons_ord = ["Farge", "Chassis", "Effekt", "Batteri", "WLTP"]   # sepsifikasjoner som kan være greit å få fra annonsen
+        self.spesifikasjons_ord = ["Farge", "Chassis", "Effekt", "Batteri",
+                                   "WLTP"]  # sepsifikasjoner som kan være greit å få fra annonsen
         self.beskrivelses_ord = ["hovedbatteri"]
         self.skrap_hoved_siden()
         self.skrap_alle_annonser()
@@ -73,8 +74,6 @@ class Skraper:
             bil.kmstand = spesifikasjons_ordbok["kilometerstand"]
             bil.pris = spesifikasjons_ordbok["pris"]
 
-            print(bil.annonse_opprettelsesdato, bil.år, bil.navn)
-
     def skarp_beskrivelse(self, bil):
         if bil.beskrivelse is not None:
             bil.beskrivelse = bil.beskrivelse.text
@@ -88,7 +87,7 @@ class Skraper:
                 continue
             for ord in self.spesifikasjons_ord:
                 if ord.lower() in spesifikasjon.text.lower():
-                    bil.ekstra_info[spesifikasjon] = bil.spesifikasjoner[index+1].text
+                    bil.ekstra_info[spesifikasjon] = bil.spesifikasjoner[index + 1].text
 
     def skrape_steds_info(self, html_parser, bil):
         steds_vindu = html_parser.find("span", class_="u-mh16")  # lette etter der lokasjonen står
@@ -108,7 +107,8 @@ class Skraper:
         spesifikasjons_boks_info = html_data.find_all("dt")  # nederst på side med navent til spesifikasjonene
         spesifikasjons_boks_data = html_data.find_all("dd")  # nedesrt på siden med spesifikajsonene til bilen
 
-        bil.spesifikasjoner = [item for par in zip(spesifikasjons_boks_info, spesifikasjons_boks_data) for item in par] #Tvinne datanene sammen, så du får navnet på spesifikasjonen og deretter dataen til spesifikasjonen
+        bil.spesifikasjoner = [item for par in zip(spesifikasjons_boks_info, spesifikasjons_boks_data) for item in
+                               par]  # Tvinne datanene sammen, så du får navnet på spesifikasjonen og deretter dataen til spesifikasjonen
         self.skrape_spesifikasjoner(bil)
 
         self.skrape_steds_info(html_data, bil)
