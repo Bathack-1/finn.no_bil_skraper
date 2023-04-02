@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 
 class Skraper:
     def __init__(self, link):
+        self.session = requests.Session()
         self.link = link
         self.alle_biler = []
         self.spesifikasjons_ord = ["Farge", "Chassis", "Effekt", "Batteri",
@@ -54,8 +55,8 @@ class Skraper:
         return ordbok
 
     def skrap_hoved_siden(self):
-        side = requests.get(self.link)
-        html_data = BeautifulSoup(side.content, "html.parser")
+        side = self.session.get(self.link)
+        html_data = BeautifulSoup(side.content, "lxml")
 
         alle_annonser = html_data.find_all("article", class_="ads__unit")
 
@@ -98,8 +99,8 @@ class Skraper:
             bil.lokasjon = steds_vindu.text
 
     def skrap_annonse(self, bil):
-        side = requests.get(bil.link)
-        html_data = BeautifulSoup(side.content, "html.parser")
+        side = self.session.get(bil.link)
+        html_data = BeautifulSoup(side.content, "lxml")
 
         bil.beskrivelse = html_data.find(id="collapsableTextContent")  # finne beskrivelsen
         self.skarp_beskrivelse(bil)
