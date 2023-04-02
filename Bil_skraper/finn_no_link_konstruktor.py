@@ -53,7 +53,6 @@ class Link_konstruktor:
         bok = f"{self.søk_filter['merke']}_model_bok"
         ordbok = globals()[bok]
         for model in self.søk_filter["model"]:
-            print(self.søk_filter["model"])
             model_tekst += ordbok[model]
             model_tekst += "&"
         return f"{model_tekst}"
