@@ -56,7 +56,7 @@ class Skraper:
 
     def skrap_hoved_siden(self):
         side = self.session.get(self.link)
-        html_data = BeautifulSoup(side.content, "html.parser")
+        html_data = BeautifulSoup(side.content, "lxml")
 
         alle_annonser = html_data.find_all("article", class_="ads__unit")
 
@@ -100,7 +100,7 @@ class Skraper:
 
     def skrap_annonse(self, bil):
         side = self.session.get(bil.link)
-        html_data = BeautifulSoup(side.content, "html.parser")
+        html_data = BeautifulSoup(side.content, "lxml")
 
         bil.beskrivelse = html_data.find(id="collapsableTextContent")  # finne beskrivelsen
         self.skarp_beskrivelse(bil)
