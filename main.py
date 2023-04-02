@@ -4,20 +4,29 @@ from Bil_skraper.finn_no_link_konstruktor import Link_konstruktor
 
 
 def main():
-    # skrap()
-    # skraper = Skraper("https://www.finn.no/car/used/search.html?location=22030&location=20061&make=0.8078&mileage_to=200000&price_to=230000&sales_form=1&sort=PUBLISHED_DESC")
-    # skrape_merker_verdi()
-    # skrape_model_verdi()
-    # skrape_område()
-    # skrive_imports()
+
+    """
+    Måten du lager et "filter" er ved oppskriften under
 
     ordbok = {
-        "merke": "opel",
-         "model": ["Ampera"],#["Model S", "Model 3"],
-        # "år": (None, None),
-         "km_stand": (None, 200000),
-         "område": ["viken", "oslo"],  # ["viken", "oslo"],
-         "salgsform": ["Bruktbil til salgs"],  # ["Bruktbil til salgs"],
+        "merke": merke,
+         "model": [alle modelene],
+         "år": (fra, til),
+         "km_stand": (fra, til),
+         "område": [alle områdene],
+         "salgsform": [alle salgsformene],
+    }
+    Dette er for å gjøre det enklest mulig å endre programmet
+    bare vær klar over at jeg ikke kan programmere, så prosessen å skrape alle annonsene tar tid
+
+    under ser du et eksempel på audi A1 i viken, som er bruktbil til salgs
+    """
+
+    ordbok = {
+        "merke": "audi",
+         "model": ["A1"],
+         "område": ["viken"],
+         "salgsform": ["Bruktbil til salgs"],
     }
 
     link_1 = Link_konstruktor(ordbok)
